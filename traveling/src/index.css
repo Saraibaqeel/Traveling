@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: 'Segoe UI';
+  src: url('../src/assests/fonts/SEGOEUI.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.Nav-bar{
+background-color: transparent !important;
+font-family: 'Poppins', sans-serif  !important;  
+color: #343232;
+font-size: 13px;
+font-weight: 500;
+}
+/* .nav-rightlist{
+  width: 50%;
+} */
+.nav-rightdiv{
+  width: 40%;
+
+  display: flex;
+  justify-content:space-between;
+
+}
+.herosection{
+  width: 100%;
+  height: 500px;
+  background-image: url("./assests/plabtss.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.8); /* Black color with 50% opacity */
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+}
+.countodown{
+  color: black !important;
+}
+.countdown-div{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+margin-top: 10%;
+
+  color: black !important;
+}
+.countdown-div div{
+  text-align: center;
+}
+/* Countdown container */
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+/* Countdown container */
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  margin-top: 4%;
+  color: black;
+  font-family: 'Poppins', sans-serif  !important;  
+}
+.comingsoon{
+  text-align: center;
+margin-bottom: 0;
+color: #343232;
+margin-top: 10%;
+font-family: 'Poppins', sans-serif  !important;  
+
+
+}
+.dots{
+  height: 55px;
+  font-size: 55px;
+  color: black;
+}
+
+
+/* Countdown item (days, hours, minutes, seconds) */
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  font-weight: bold;
+  position: relative;
+  font-family: 'Noto Sans Old Permic', sans-serif;
+}
+
+/* Apply transitions to the numbers for a smooth effect */
+.countdown-item span {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+/* Add a class to fade out the number */
+.countdown-item.fade-out span {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Add a class to fade in the new number */
+.countdown-item.fade-in span {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.date-heading{
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif  !important;  
+  color: #343232;
+
+}
+.time{
+  font-size: 50px;
+  font-family: 'Open Sans', sans-serif !important;
+  color: black;
+font-weight: 500;
+}
+.icon-box{
+  position: absolute;
+  height: 100px;
+  top: 35%;
+  right: 6%;
+  gap: 20px;
+  color: #343232;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.icons{
+  color: #343232;
+}
