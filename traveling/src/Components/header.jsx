@@ -9,6 +9,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useState,useEffect } from 'react';
 import CountdownComponent from './Countdown';
 import { AiOutlineInstagram } from 'react-icons/ai';
+import VideoSection from './VideoSection';
 
 import {FiTwitter,FiFacebook,FiInstagram} from 'react-icons/fi'
 
@@ -45,6 +46,7 @@ function Header() {
    
 
   return (
+    <div>
     <div className='herosection'>
         <div className='icon-box'>
             <div> <FiInstagram className='icons' /></div>
@@ -78,6 +80,10 @@ function Header() {
     </Navbar>
     <h3 className='comingsoon' >Our online store will open in....</h3>
 <CountdownComponent/>
+
+
+    </div>
+
     </div>
   );
 }

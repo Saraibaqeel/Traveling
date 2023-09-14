@@ -41,11 +41,9 @@ font-weight: 500;
   background-position: center;
   background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0.8); /* Black color with 50% opacity */
-  width: 100%;
-  height: 500px;
-  position: absolute;
-  top: 0;
-  left: 0;
+  
+  padding: 0;
+  margin-bottom: 5%;
   object-fit: contain;
 }
 .countodown{
@@ -150,4 +148,127 @@ font-weight: 500;
 }
 .icons{
   color: #343232;
+}
+.video-section{
+  width: 100%;
+  height: 800px;
+  background-color: rgba(209, 143, 127, 0.2);
+
+
+ 
+}
+.quiz-section{
+  width: 100%;
+  
+  background-color: rgba(209, 143, 127, 0.2);
+  margin-top: 10%;
+  font-family: 'Poppins', sans-serif  ;
+  margin-bottom: 20%;
+}
+.quiz-section h4{
+  text-align: center;
+  font-family: Cormorant Garamond;
+  font-size: 30px;
+
+  padding-top: 50px;
+}
+
+
+
+.video-section h4{
+  text-align: center;
+  font-family: Cormorant Garamond;
+  font-size: 30px;
+
+  padding-top: 50px;
+
+}
+.video-section p{
+  font-family: 'Poppins', sans-serif  ;
+  font-size: 20px;
+  color: #343434;
+  text-align: center;
+}
+.video-box{
+  margin-top: 7%;
+}
+.textdiv{
+  display: flex;
+  align-items: center;
+}
+.iframe-box{
+  width: 100% !important;
+  height: 100% !important;
+}
+.email-div{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20%;
+}
+.Questions-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif  ;
+  font-weight: 600;
+}
+.next-button{
+
+  border: none;
+  background-color: white;
+  color: black;
+  font-family: 'Poppins', sans-serif  ;
+  border-radius: 10px;
+font-weight: 600;
+  padding: 5px;
+  padding-left: 35px;
+  padding-right: 35px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.radio-div{
+  display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.options-div{
+  display: flex;
+  flex-direction: column;
+}
+.next-btn-div{
+  display:flex;
+  justify-content: flex-end;
+}
+.options-div label{
+  display: block;
+  width: 100%;
+
+}
+.options-div div{
+ cursor: pointer;
+  padding: 20px;
+  background-color: white;
+  margin-top: 5%;
+  width: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.selected-label {
+color: green !important;
+background-color: #343434 !important;
+
+}
+.options-div .selected-option{
+  background-color: #8B80B6
+  ;
+}
+.email-input{
+  border: none;
+  outline: none;
+ font-size: 12px;
+ padding: 5px;
+}
+.email-input ::placeholder{
+  font-size: 15px;
 }
