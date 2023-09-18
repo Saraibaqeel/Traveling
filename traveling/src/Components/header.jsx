@@ -15,7 +15,29 @@ import {FiTwitter,FiFacebook,FiInstagram} from 'react-icons/fi'
 
 function Header() {
     const [count, setCount] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+    const [scrolling, setScrolling] = useState(false);
+    const [imageSrc, setImageSrc] = useState(
+      'https://blossomthemesdemo.com/blossom-travel-pro/wp-content/uploads/sites/33/2019/09/logo-light_e5b56f0083144d8573137039e2559c76-1.png'
+    );
 
+    useEffect(() => {
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+  
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+        setImageSrc('https://blossomthemesdemo.com/blossom-travel-pro/wp-content/uploads/sites/33/2019/09/logo-light_6da742f4f2cd111344a9ce86942eecd6.png');
+      } else {
+        setScrolling(false);
+        setImageSrc(
+          'https://blossomthemesdemo.com/blossom-travel-pro/wp-content/uploads/sites/33/2019/09/logo-light_e5b56f0083144d8573137039e2559c76-1.png'
+        );
+      }
+    };
     const targetTimestamp = Date.now() + 7 * 24 * 60 * 60 * 1000;
     useEffect(() => {
         const interval = setInterval(() => {
@@ -47,18 +69,10 @@ function Header() {
 
   return (
     <div>
-    <div className='herosection'>
-        <div className='icon-box'>
-            <div> <FiInstagram className='icons' /></div>
-       
-            <div>  <FiFacebook className='icons'/></div>
-            <div>     <FiTwitter className='icons'/></div>
-      
-   
-        </div>
-    <Navbar expand="lg" className="bg-body-tertiary Nav-bar">
+          
+    <Navbar expand="lg" className={`top-navbar ${scrolling ? 'scrolling' : ''} bg-body-tertiary Nav-bar customnav`}   >
       <Container fluid>
-        <Navbar.Brand  href="#" className="Nav-bar">Logo</Navbar.Brand>
+        <Navbar.Brand  href="#" className="Nav-bar mybar"> <img src={imageSrc} alt="" /> </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -78,12 +92,21 @@ function Header() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    <div className='herosection'>
+   
     <h3 className='comingsoon' >Our online store will open in....</h3>
 <CountdownComponent/>
 
 
     </div>
-
+    <div className='icon-box'>
+            <div> <FiInstagram className='icons' /></div>
+       
+            <div>  <FiFacebook className='icons'/></div>
+            <div>     <FiTwitter className='icons'/></div>
+      
+   
+        </div>
     </div>
   );
 }

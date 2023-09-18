@@ -1,7 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect ,useRef } from 'react';
+import { collection, addDoc } from "firebase/firestore"; 
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import url from '../assests/download-removebg-preview (2).png'
+const firebaseConfig = {
+  apiKey: "AIzaSyCIYWdTiTYIGWa2QnCEe5LWQ_T4uEdljmE",
+  authDomain: "sitetraveling-ff62c.firebaseapp.com",
+  projectId: "sitetraveling-ff62c",
+  storageBucket: "sitetraveling-ff62c.appspot.com",
+  messagingSenderId: "761152543923",
+  appId: "1:761152543923:web:8489fd90519ba9b0d124c6",
+  measurementId: "G-3Q2HD11N1R"
+};
+const app = initializeApp(firebaseConfig);
 
+// Get a Firestore instance
+const db = getFirestore(app);
 
 function Quiz() {
+  const email1 = useRef(null);
+  const email2 = useRef(null);
+  const HandleSubmit= async()=>{
+    const FirstEmail=email1.current.value;
+    const SecondEmail=email2.current.value;
+    const docRef = await addDoc(collection(db, "Users"), {
+      FirstEmail: FirstEmail,
+      SecondEmail: SecondEmail,
+      answers:answers
+    });
+    console.log("Document written with ID: ", docRef.id);
+    setthanksmessage(true)
+  }
   const questions = [
     {
       question: "Do you plan to come to Paris in 2024?",
@@ -26,6 +55,7 @@ function Quiz() {
   ];
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [thanksmessage, setthanksmessage] = useState(false);
   const [userResponses, setUserResponses] = useState(Array(questions.length).fill(null));
   const [showInput, setShowInput] = useState(true);
   const [selectedOption, setSelectedOption] = useState(null);
@@ -100,10 +130,24 @@ function Quiz() {
               </button>
             </div>
           </div>
-        ) : (
-          <div className='email-div'>
-            <input className='email-input' type='email' placeholder='Enter Email'></input>
+        ) :  thanksmessage ? (
+          <div className='thank-you-message'>
+            <div><img src={url} alt=""  width={"150px"}/></div>
+            <p>Thank you for your submission!</p>
           </div>
+        ) : (  
+          <div className='email-div row'>
+            <div className='col-md-6 col-sm-6'>
+            <input ref={email1} className='email-input' type='email' placeholder='First Enter Email'></input>
+            </div>
+            <div className='col-md-6 col-sm-6'>
+            <input ref={email2} className='email-input' type='email' placeholder='Second Enter Email'></input>
+            </div>
+            <div className='col-md-12'>
+            <button onClick={HandleSubmit} className='Submit-btn'>Submit</button>
+            </div>
+          </div>
+          
         )}
       </div>
     </div>

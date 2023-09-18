@@ -6,11 +6,14 @@ function CountdownComponent() {
   const [count, setCount] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   // Calculate the target timestamp for 7 days (7 days * 24 hours * 60 minutes * 60 seconds * 1000 milliseconds)
-  const targetTimestamp = Date.now() + 7 * 24 * 60 * 60 * 1000;
+  const targetDate = new Date(2024, 0, 6); // January is month 0
+  const targetTimestamp = targetDate.getTime();
+
 
   useEffect(() => {
     const interval = setInterval(() => {
       const currentTime = Date.now();
+  
       const remainingTime = targetTimestamp - currentTime;
 
       if (remainingTime <= 0) {
@@ -38,6 +41,8 @@ function CountdownComponent() {
 
   return (
     <div className="countdown">
+      <p>Our online store will open in....</p>
+      <div className='time-section'>
       <div className="countdown-item">
       <p className='date-heading'>DAYS</p>
         <span className='time'>{formatNumber(count.days)}</span>
@@ -59,6 +64,7 @@ function CountdownComponent() {
       <p className='date-heading'>SECONDS</p>
         <span className="fade-in-out time">{formatNumber(count.seconds)}</span>
        
+      </div>
       </div>
     </div>
   );
