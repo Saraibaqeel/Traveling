@@ -21,13 +21,12 @@ background-color: transparent !important;
 font-family: 'Poppins', sans-serif  !important;  
 color: white;
 font-size: 13px;
+padding: 0px;
 font-weight: 500;
 z-index: 3;
 border-bottom: 1px solid #ffffff4d;
 }
-/* .nav-rightlist{
-  width: 50%;
-} */
+
 .nav-rightdiv{
   display: flex !important;
   flex-direction: row !important;
@@ -35,37 +34,46 @@ border-bottom: 1px solid #ffffff4d;
   gap: 100px;
 }
 .nav-rightdiv {
-  /* Add your default styles here */
-  color: white !important; /* Change to your default text color */
+
+  color: white !important;
 }
 
-/* Style for .nav-rightdiv when scrolling */
+
 .top-navbar.scrolling .nav-rightdiv {
   color: black !important; /* Change to black when scrolling */
 }
 .herosection{
   width: 100%;
-  height: 500px;
-  background-image: url("./assests/banner-img-o.jpg");
+
   background-size: cover;
   background-position: center;
-  
+  position: relative;
   background-repeat: no-repeat;
 
   
   
   object-fit: contain;
 }
-.herosection::before {
+
+.video-tab {
+  position: relative !important;
+}
+
+.video-tab::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
-  height: 500px;
-  background-color: rgba(0, 0, 0, 0.4); /* Black color with 50% opacity */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Black color with 40% opacity */
+  z-index: 3;
 }
+
+
+
+
+
 
 
 
@@ -91,16 +99,20 @@ margin-top: 10%;
 .countdown-div div{
   text-align: center;
 }
-/* Countdown container */
+
 .countdown {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 24px;
+  width: 100%;
   position: relative;
   z-index: 2;
 }
-
+#logo-text{
+  font-size: 30px;
+  font-family: 'Sansita Swashed', cursive;
+}
 /* Countdown container */
 .countdown {
 
@@ -108,7 +120,8 @@ margin-top: 10%;
 flex-direction: column;
   align-items: center;
   font-size: 30px;
-  margin-top: 12%;
+  position: absolute;
+  top: 30%;
   color: white;
   font-family: 'Poppins', sans-serif  !important;  
 }
@@ -140,7 +153,12 @@ font-family: Cormorant Garamond !important;
 
 .top-navbar.scrolling {
   background-color: white !important; /* Change to your desired color */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+
+  
+
 .dots{
 line-height: 130px;
   font-size: 55px;
@@ -215,7 +233,7 @@ height: 200px;
 }
 .video-section{
   width: 100%;
-  height: 800px;
+
 
 
 
@@ -224,10 +242,11 @@ height: 200px;
 .quiz-section{
   width: 100%;
   
-  background-color: rgba(228,191,182,.1);
+  background-color: #eeb7a99c;
   
   font-family: 'Poppins', sans-serif  ;
   margin-bottom: 20%;
+  margin-top: 20%;
 }
 .quiz-section h4{
   text-align: center;
@@ -293,7 +312,7 @@ height: 200px;
 .next-button{
 
   border: none;
-  background-color:#e4bfb6 ;
+  background-color:#f6d3ce; ;
   padding: 5px;
 
   color: #343434;
@@ -322,7 +341,7 @@ height: 200px;
 }
 .next-btn-div{
   display:flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 .options-div label{
   display: block;
@@ -343,7 +362,7 @@ background-color: #343434 !important;
 
 }
 .options-div .selected-option{
-  background-color: #8B80B6
+  background-color: #eba08e
   ;
 }
 .email-input{
@@ -385,7 +404,7 @@ video{
 }
 .more-button{
   border: none;
-  background-color: #e4bfb6 ;
+  background-color: #f6d3ce ;
   padding: 20px;
 
   color: #343434;
@@ -400,10 +419,11 @@ video{
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  justify-content: center;
 }
 .video-div{
   display: flex;
+  justify-content: center;
 }
 .more-button:hover{
   transition: 0.5s ease-in-out;
@@ -435,8 +455,9 @@ video{
   padding-bottom: 20px;
 }
 @media only screen and (max-width: 740px) {
+
   .countdown {
-    margin-top: 22% !important;
+
     font-size: 20px;
   }
   .date-heading{
@@ -459,11 +480,134 @@ video{
 }
 
 @media only screen and (max-width: 530px) {
-
+  #logo-text{
+    font-size: 20px;
+  }
+.footer-icons-sec{
+  display: flex;
+  flex-wrap: wrap !important;
+}
   .Nav-bar img{
     width: 120px;
   }
   .options-div div{
     width: 100%;
   }
+}
+.Footer-section{
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 8px;
+  background-color: #111111;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+.footer-icon-div:hover{
+  transition: 0.3s ease-in-out;
+  background-color: #eba08e ;
+  cursor: pointer;
+  color: white !important;
+}
+.icon-footer:hover{
+  transition: 0.3s ease-in-out;
+ color: white ;
+  cursor: pointer;
+}
+
+.footer-icons-sec{
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  flex-wrap: wrap;
+  color: black;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+}
+.hrline{
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  margin-top: 5%;
+}
+.footer-icon-div{
+  background-color: white;
+  width: 50px; /* Adjust the width and height as needed */
+  height: 50px;
+  text-align: center;
+  border-radius: 50%; /* This makes the div a circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  
+ 
+
+}
+.icon-footer{
+font-size: 25px;
+color: black;
+}
+.Companyname{
+  font-family: 'Poppins', sans-serif  ;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 2%;
+  color: white;
+}
+.pages-footer-links{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1%;
+}
+.pages-footer-links div{
+  font-family: 'Poppins', sans-serif  ;
+  font-size: 13px;
+  color: white;
+}
+.copyright-text{
+  font-family: 'Poppins', sans-serif  ;
+  font-size: 12px;
+  margin-top: 1%;
+  color: white;
+}
+.options-div div:hover{
+  background-color: #eba08e;
+  color: white;
+  transition: 0.5s ease-in-out;
+} 
+.nav-rightlist:hover{
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  color: #eba08e;
+  border-bottom: 2px solid #eba08e;
+
+}
+.back-button{
+  border: none;
+  background-color:#f6d3ce ;
+  padding: 5px;
+
+  color: #343434;
+  font-size: 15px;
+  font-weight: 100;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  font-weight: 500;
+  cursor: pointer;
+}
+.back-button:hover{
+  transition: 0.5s ease-in-out;
+  background-color: #eba08e  !important;
+  color: white !important;
+}
+.navbar-toggler:focus {
+  box-shadow: unset;
+  outline: 0;
+  text-decoration: none;
+}
+.qr-box{
+  margin-bottom: 15%;
 }
