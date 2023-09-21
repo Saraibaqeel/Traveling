@@ -41,6 +41,31 @@ border-bottom: 1px solid #ffffff4d;
 
 .top-navbar.scrolling .nav-rightdiv {
   color: black !important; /* Change to black when scrolling */
+  transition: 0.5s ease-in-out;
+}
+.top-navbar.scrolling .nav-center .children-div li{
+  color: black !important;
+  transition: 0.5s ease-in-out;
+}
+.top-navbar.scrolling .nav-left .top-icon .icons1{
+  color: black !important;
+  transition: 0.5s ease-in-out;
+}
+.top-navbar.scrolling .nav-right .seacrh-input-div .search-input::placeholder{
+  color: black !important;
+  transition: 0.5s ease-in-out;
+}.top-navbar.scrolling .nav-right .seacrh-input-div .search-icon{
+  color: black !important;
+  transition: 0.5s ease-in-out;
+}
+
+.top-navbar.scrolling .nav-right p{
+  color: black !important;
+  transition: 0.5s ease-in-out;
+}
+.top-navbar.scrolling .nav-left .hamburger{
+  color: black !important;
+  transition: 0.5s ease-in-out;
 }
 .herosection{
   width: 100%;
@@ -154,6 +179,7 @@ font-family: Cormorant Garamond !important;
 .top-navbar.scrolling {
   background-color: white !important; /* Change to your desired color */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.5s ease-in-out !important;
 }
 
 
@@ -239,6 +265,63 @@ height: 200px;
 
  
 }
+.nav-center{
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+.children-div li{
+display: inline;
+text-decoration: none;
+font-family: 'Poppins', sans-serif  !important;  
+color: white;
+font-weight: 300;
+cursor: pointer;
+
+}
+.search-input{
+  outline: none;
+}
+.icons1{
+  color: white;
+  font-weight: 300;
+}
+.search-input::placeholder{
+  font-family: 'Poppins', sans-serif  !important;  
+  color: white;
+  font-size: 12px;
+}
+.children-div {
+  /* Add margin or padding to create space between list items */
+  margin: 15px; /* You can adjust the value to control the spacing */
+  padding: 0;
+ width: 30%;
+ display: flex;
+ justify-content: space-between;
+}
+.search-input{
+  border: none;
+  background-color: transparent;
+}
+
+.children-div li {
+  /* Style the list items as needed */
+  list-style-type: none; /* Remove bullet points */
+}
+.customnav1{
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    height: 50px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-right{
+  width: 16%;
+}
 .quiz-section{
   width: 100%;
   
@@ -312,7 +395,7 @@ height: 200px;
 .next-button{
 
   border: none;
-  background-color:#f6d3ce; ;
+  background-color:#e0a199; ;
   padding: 5px;
 
   color: #343434;
@@ -483,6 +566,9 @@ video{
   #logo-text{
     font-size: 20px;
   }
+  .nav-right{
+    margin-top: 2%;
+  }
 .footer-icons-sec{
   display: flex;
   flex-wrap: wrap !important;
@@ -585,7 +671,7 @@ color: black;
 }
 .back-button{
   border: none;
-  background-color:#f6d3ce ;
+  background-color:#e0a199 ;
   padding: 5px;
 
   color: #343434;
@@ -610,4 +696,47 @@ color: black;
 }
 .qr-box{
   margin-bottom: 15%;
+}
+.top-icon{
+margin: 15px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.nav-left{
+  width: 15%;
+  
+}
+.search-input{width: 60%;}
+.seacrh-input-div{
+  width: 90%;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+}
+.search-icon{
+  margin-top: 2%;
+  font-size: 15px;
+  width: 10%;
+}
+@media only screen and (min-width: 800px) {
+.mobile-nav{
+  display: none;
+}
+}
+
+@media only screen and (max-width: 800px) {
+  .desktop-nav {
+    display: none;
+  }
+  .nav-right{
+    width: 50%;
+  }
+  .nav-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.hamburger{
+  font-size: 25px;
 }
