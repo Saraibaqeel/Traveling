@@ -344,7 +344,7 @@ cursor: pointer;
 .quiz-section{
   width: 100%;
   
-  background-color: #eeb7a99c;
+  background: rgba(228, 191, 182, 0.1);
   
   font-family: 'Poppins', sans-serif  ;
   margin-bottom: 20%;
@@ -356,7 +356,7 @@ cursor: pointer;
   text-align: center;
   font-family: poppins;
   font-size: 30px;
-  width: 50%;
+  width: 80%;
   padding-top: 50px;
   /* justify-content: center; */
   margin: 0 auto;
@@ -398,14 +398,18 @@ cursor: pointer;
     align-items: center;
 
   padding-bottom: 20%;
+  margin-top: 5%;
 }
 .email-div div{
   text-align: center;
 }
 .email-div input{
-  margin-top: 10%;
-  border: 1px solid white;
+  margin-top: 5%;
+  border: 1px solid #c6b7b7;
   width: 80%;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
  
 }
 
@@ -415,6 +419,7 @@ cursor: pointer;
   justify-content: center;
   font-family: 'Poppins', sans-serif  ;
   font-weight: 600;
+  margin-top: 5%;
 }
 .next-button{
 
@@ -445,6 +450,7 @@ cursor: pointer;
 .options-div{
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .next-btn-div{
   display:flex;
@@ -460,7 +466,7 @@ cursor: pointer;
   padding: 20px;
   background-color: white;
   margin-top: 5%;
-  width: 50%;
+  width: 90%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .selected-label {
@@ -487,9 +493,7 @@ background-color: #343434 !important;
 .navbar-toggler {
   border: none !important;
 }
-@media only screen and (max-width: 790px) {
 
-}
 @media only screen and (max-width: 992px) {
   .nav-rightdiv {
     display: flex !important;
@@ -515,7 +519,7 @@ video{
 .more-button{
   border: none;
   background-color: #f6d3ce ;
-  padding: 20px;
+  padding: 10px;
 
   color: #343434;
   font-size: 15px;
@@ -814,7 +818,7 @@ margin: 15px;
 .recaptch-section{
   display: flex;
   justify-content: center;
-  margin-bottom: 20%;
+margin-top: 10%;
 }
 
 .label-div{
@@ -824,3 +828,32 @@ margin: 15px;
 
     text-align: left !important;
 }
+.error-msg{
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif  ;
+  margin-top: 5%;
+  color: red;
+}
+.question-main-div{
+  display: flex;
+  width: 100%;
+}
+.options-image{
+  transform: rotate(-15deg) !important;
+  border: 8px solid white;
+  width: 100%;
+  height: 250px;
+}
+@media only screen and (max-width: 770px) {
+  .question-main-div{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .options-image{
+    transform: rotate(0deg) !important;
+    border: 8px solid white;
+    width: 300px;
+    height: 250px;
+  }
+  
+  }
