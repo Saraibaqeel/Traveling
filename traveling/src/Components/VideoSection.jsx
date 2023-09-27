@@ -10,7 +10,7 @@ function VideoSection(){
       }, []);
     return(
         <div className="video-section">
-            <h4 data-aos="fade-up" data-aos-duration="2000" >Your Adventure Starts Now</h4>
+            <h4 data-aos="fade-up" data-aos-duration="2000" > Exclusive Tours With Best Experiences </h4>
             <div className="container video-box">
                 <div className="row">
                   

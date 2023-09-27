@@ -6,10 +6,10 @@ import {BsTwitter,BsYoutube} from 'react-icons/bs'
 function Footer(){
     return(
         <div className="Footer-section">
-            
+        
             <div className="footer-icons-sec">
-             <div className="footer-icon-div"><FaFacebookF className='icons icon-footer' /></div>
-             <div className="footer-icon-div"><AiFillInstagram className='icons icon-footer' /></div>
+             <div className="footer-icon-div"> <a href="    https://www.facebook.com/profile.php?id=61551824521264"> <FaFacebookF className='icons icon-footer' /></a></div>
+             <div className="footer-icon-div"> <a href="https://instagram.com/jolitourparis?igshid=NzZlODBkYWE4Ng=="> <AiFillInstagram className='icons icon-footer' /></a></div>
              <div className="footer-icon-div"><BsTwitter className='icons icon-footer' /></div>
              <div className="footer-icon-div"><AiOutlineGooglePlus className='icons icon-footer' /></div>
              <div className="footer-icon-div"><BsYoutube className='icons icon-footer' /></div>

@@ -110,6 +110,7 @@ border-bottom: 1px solid #ffffff4d;
 
 .countodown{
   color: white !important;
+
 }
 .countdown-div{
   width: 80%;
@@ -129,13 +130,13 @@ margin-top: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
+  font-size: 40px;
   width: 100%;
   position: relative;
-  z-index: 2;
+  z-index: 5;
 }
 #logo-text{
-  font-size: 30px;
+  font-size: 32px;
   font-family: 'Sansita Swashed', cursive;
 }
 /* Countdown container */
@@ -144,7 +145,7 @@ margin-top: 10%;
   display: flex;
 flex-direction: column;
   align-items: center;
-  font-size: 30px;
+  font-size: 40px;
   position: absolute;
   top: 30%;
   color: white;
@@ -152,6 +153,9 @@ flex-direction: column;
 }
 .time-section{
   display: flex;
+}
+.time{
+  transition: 0.5s ease-in-out;
 }
 .customnav {
   position: fixed;
@@ -186,7 +190,7 @@ font-family: Cormorant Garamond !important;
   
 
 .dots{
-line-height: 130px;
+line-height: 110px;
   font-size: 55px;
   color: white;
   position: relative;
@@ -226,15 +230,16 @@ line-height: 130px;
 }
 .date-heading{
   font-size: 12px;
-  font-family: 'Poppins', sans-serif  !important;  
+  font-family: "Segoe UI", Arial, sans-serif;
   color: white;
   position: relative;
+  margin-bottom: 0;
   z-index: 2;
 font-weight: 500;
 }
 .time{
   font-size: 50px;
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: "Segoe UI", Arial, sans-serif;
   color: white;
   position: relative;
   z-index: 2;
@@ -249,13 +254,26 @@ height: 200px;
   color: #343232;
   background-color: white;
   padding: 12px;
-  z-index: 2;
+  z-index: 5;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .icons{
   color: #343232;
+  cursor: pointer;
+}
+.icons:hover{
+  color: #ed8369;
+  transition: 0.5s ease-in-out;
+}
+.icons1{
+  cursor: pointer;
+}
+.icons1:hover{
+  color: #ed8369;
+  transition: 0.5s ease-in-out;
 }
 .video-section{
   width: 100%;
@@ -268,7 +286,7 @@ height: 200px;
 .nav-center{
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  width: 80%;
 }
 .children-div li{
 display: inline;
@@ -276,6 +294,7 @@ text-decoration: none;
 font-family: 'Poppins', sans-serif  !important;  
 color: white;
 font-weight: 300;
+font-size: 12px;
 cursor: pointer;
 
 }
@@ -295,7 +314,7 @@ cursor: pointer;
   /* Add margin or padding to create space between list items */
   margin: 15px; /* You can adjust the value to control the spacing */
   padding: 0;
- width: 30%;
+ width: 32%;
  display: flex;
  justify-content: space-between;
 }
@@ -315,7 +334,7 @@ cursor: pointer;
     background-color: transparent;
     position: fixed;
     top: 0;
-    z-index: 3;
+    z-index: 8;
     display: flex;
     justify-content: space-between;
 }
@@ -334,17 +353,24 @@ cursor: pointer;
 .quiz-section h4{
   text-align: center;
   font-family: Cormorant Garamond;
+  text-align: center;
+  font-family: poppins;
   font-size: 30px;
+  width: 50%;
+  padding-top: 50px;
+  /* justify-content: center; */
+  margin: 0 auto;
 
   padding-top: 50px;
+
 }
 
 
 
 .video-section h4{
   text-align: center;
-  font-family: Cormorant Garamond;
-  font-size: 30px;
+
+  font-size: 35px;
 
   padding-top: 50px;
 
@@ -355,9 +381,7 @@ cursor: pointer;
   color: #343434;
   text-align: center;
 }
-.video-box{
-  margin-top: 7%;
-}
+
 .textdiv{
   display: flex;
   align-items: center;
@@ -370,7 +394,7 @@ cursor: pointer;
   display: flex;
 
     /* justify-content: center; */
-    flex-direction: column;
+
     align-items: center;
 
   padding-bottom: 20%;
@@ -381,7 +405,7 @@ cursor: pointer;
 .email-div input{
   margin-top: 10%;
   border: 1px solid white;
-  width: 50%;
+  width: 80%;
  
 }
 
@@ -463,6 +487,9 @@ background-color: #343434 !important;
 .navbar-toggler {
   border: none !important;
 }
+@media only screen and (max-width: 790px) {
+
+}
 @media only screen and (max-width: 992px) {
   .nav-rightdiv {
     display: flex !important;
@@ -537,7 +564,29 @@ video{
   text-align: center;
   padding-bottom: 20px;
 }
+@media only screen and (max-width: 400px) {
+  .time{
+padding: 10px !important;
+    font-size: 12px !important;
+  }
+  .date-heading{
+    font-size: 8px !important;
+  }
+
+}
 @media only screen and (max-width: 740px) {
+  .time{
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    font-size: 15px !important;
+  }
+  .countdown p {
+    font-size: 18px;
+  }
+  .date-heading{
+    font-size: 10px !important;
+  }
+
 
   .countdown {
 
@@ -547,7 +596,7 @@ video{
     font-size: 13px;
   }
   .dots{
-    line-height: 98px;
+    line-height: 70px;
     font-size: 20px;
   }
   .time{
@@ -563,6 +612,9 @@ video{
 }
 
 @media only screen and (max-width: 530px) {
+  .quiz-section h4{
+    width: 100%;
+  }
   #logo-text{
     font-size: 20px;
   }
@@ -739,4 +791,36 @@ margin: 15px;
 }
 .hamburger{
   font-size: 25px;
+}
+.icon-box{
+  position: fixed;
+}
+.video-tab {
+  position: relative;
+}
+
+.herosection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99% !important;
+  z-index: 3; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  pointer-events: none; /* Disable interactions on the overlay */
+}
+
+.recaptch-section{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20%;
+}
+
+.label-div{
+  width: 80%;
+    margin: 0 auto;
+    /* display: flex; */
+
+    text-align: left !important;
 }

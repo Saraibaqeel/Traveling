@@ -21,6 +21,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 function Quiz() {
+
   useEffect(() => {
     AOS.init(); // Initialize AOS when the component mounts
   }, []);
@@ -95,20 +96,25 @@ function Quiz() {
   const HandleSubmit = async () => {
     const FirstEmail = email1.current.value;
     const SecondEmail = email2.current.value;
-    const docRef = await addDoc(collection(db, "Users"), {
-      FirstEmail: FirstEmail,
-      SecondEmail: SecondEmail,
-      answers: answers,
-    });
-    console.log("Document written with ID: ", docRef.id);
-    setthanksmessage(true);
+    if(FirstEmail == "" || SecondEmail == "" ){
+    alert("adsadssd")
+    }
+else{
+  const docRef = await addDoc(collection(db, "Users"), {
+    YourEmail: FirstEmail,
+    YoourLovedOnesEmail: SecondEmail,
+    answers: answers,
+  });
+  console.log("Document written with ID: ", docRef.id);
+  setthanksmessage(true);
+}
   };
 
   return (
     <div>
       <div>
         {currentQuestionIndex < questions.length && showInput ? (
-          <div className='Questions-div'>
+          <div id="quiz"  className='Questions-div'>
             <p>{currentQuestionIndex + 1}/5</p>
             <p>{questions[currentQuestionIndex].question}</p>
             <div className='options-div'>
@@ -165,10 +171,15 @@ function Quiz() {
         ) : (
           <div className='email-div row'>
             <div data-aos="fade-right" data-aos-duration="2000"  className='col-md-6 col-sm-6'>
-              <input ref={email1} className='email-input' type='email' placeholder='First Enter Email'></input>
+           
+    <div className="label-div"> <label htmlFor="">Your Email</label></div>
+              <input ref={email1} className='email-input' type='email' placeholder='Enter Your Email'></input>
             </div>
             <div data-aos="fade-left" data-aos-duration="2000"  className='col-md-6 col-sm-6'>
-              <input ref={email2} className='email-input' type='email' placeholder='Second Enter Email'></input>
+             
+            <div className="label-div"> <label htmlFor="">Your Loved One's Email</label></div>
+
+              <input ref={email2} className='email-input' type='email' placeholder="Enter Your Loved One's Email"></input>
             </div>
             <div data-aos="fade-up" data-aos-duration="2000"  className='col-md-12'>
               <button onClick={HandleSubmit} className='Submit-btn'>Submit</button>

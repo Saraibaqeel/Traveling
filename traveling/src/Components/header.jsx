@@ -44,6 +44,20 @@ function Header() {
         videoRef.current.loop = true;
       }
     }, []);
+    useEffect(() => {
+      if (videoRef.current) {
+        const video = videoRef.current;
+        video.muted = true; // Mute the video
+        video.play()
+          .then(() => {
+            // Video successfully played
+          })
+          .catch(error => {
+            console.error('Error playing video:', error);
+          });
+      }
+    }, []);
+  
   
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -127,16 +141,16 @@ function Header() {
       </ul>
            <p id='logo-text'>Joli Tour</p>
            <ul className='children-div'>
-        <li>Travel</li>
-        <li>Pages</li>
+        <li>Experiences</li>
+        <li>Booking</li>
         <li>Contact</li>
       </ul>
       </div>
       <div className='nav-left'>
         <div className='top-icon'>
-        <div > <FiInstagram className='icons1' /></div>
+        <div > <a href="https://instagram.com/jolitourparis?igshid=NzZlODBkYWE4Ng=="> <FiInstagram className='icons1' /></a></div>
        
-       <div>  <FiFacebook className='icons1'/></div>
+       <div> <a href="https://www.facebook.com/profile.php?id=61551824521264"> <FiFacebook className='icons1'/></a> </div>
        <div>     <FiTwitter className='icons1'/></div>
         </div>
       </div>
@@ -166,7 +180,7 @@ function Header() {
     </div>
     
     <div  className='herosection'>
-    <video  ref={videoRef} className='video-tab'  width="100%"autoPlay loop >
+    <video  id="myVideo" ref={videoRef} className='video-tab'  width="100%" loop playsInline>
     <source src={url} type="video/mp4" />
     Your browser does not support the video tag.
   </video>
@@ -177,10 +191,10 @@ function Header() {
     </div>
     <div  data-aos="fade-down"
      data-aos-duration="2000"  className='icon-box'>
-            <div> <FiInstagram className='icons' /></div>
+            <div> <a href="https://instagram.com/jolitourparis?igshid=NzZlODBkYWE4Ng=="> <FiInstagram className='icons' /> </a> </div>
        
-            <div>  <FiFacebook className='icons'/></div>
-            <div>     <FiTwitter className='icons'/></div>
+            <div> <a href="https://www.facebook.com/profile.php?id=61551824521264">  <FiFacebook className='icons'/> </a> </div>
+            <div> <a href="">   <FiTwitter className='icons'/> </a> </div>
       
    
         </div>

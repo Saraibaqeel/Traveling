@@ -1,10 +1,24 @@
 import url from '../assests/Joli Tour.png'
 import AOS from 'aos';
-import { useEffect } from 'react';
+import { useEffect,useState,useRef  } from 'react';
 import 'aos/dist/aos.css';
+import Recaptch from './Recaptch';
+import ReCAPTCHA from 'react-google-recaptcha';
+
+
 
 
 function Qrsection(){
+  const captchaRef = useRef(null)
+  
+    const [isVerified, setIsVerified] = useState(false);
+  
+
+    const handleVerify = (token) => {
+      // Here, you can perform actions based on the token.
+      // For example, you can submit the form if the token is valid.
+      setIsVerified(true);
+    };
     useEffect(() => {
         AOS.init(); // Initialize AOS when the component mounts
       }, []);
@@ -29,6 +43,8 @@ function Qrsection(){
 
                 </div>
             </div>
+          
+      
         </div>
     )
 }

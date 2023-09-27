@@ -41,7 +41,7 @@ function CountdownComponent() {
 
   return (
     <div className="countdown">
-      <p>Our online store will open in....</p>
+      <p>Online Reservations in...</p>
       <div className='time-section'>
       <div className="countdown-item">
       <p className='date-heading'>DAYS</p>
