@@ -31,7 +31,7 @@ function Qrsection(){
               
   
   <div className='col-md-12 col-lg-12 col-sm-12 first-div' >
-    <img src={url} alt="" width={"200px"} />
+    <img src={url} alt="" width={"200px"} className='qr-img' />
  <h4 className='down-heading'>Scan Qr Code</h4>
   <a href="https://jolitour.netlify.app/#quiz"><button className='more-button'>Visit</button></a>
   

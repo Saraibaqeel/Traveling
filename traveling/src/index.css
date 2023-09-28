@@ -373,6 +373,7 @@ cursor: pointer;
   font-size: 35px;
 
   padding-top: 50px;
+  font-family: Cormorant Garamond !important;
 
 }
 .video-section p{
@@ -420,6 +421,13 @@ cursor: pointer;
   font-family: 'Poppins', sans-serif  ;
   font-weight: 600;
   margin-top: 5%;
+}
+.Questions-div p{
+
+  font-family: 'Poppins', sans-serif  ;
+  font-weight: 500;
+  margin-top: 5%;
+  font-size: 20px;
 }
 .next-button{
 
@@ -475,8 +483,9 @@ background-color: #343434 !important;
 
 }
 .options-div .selected-option{
-  background-color: #eba08e
+  background-color: black
   ;
+  color: white;
 }
 .email-input{
   border: none;
@@ -494,6 +503,12 @@ background-color: #343434 !important;
   border: none !important;
 }
 
+
+@media only screen and (min-width: 992px) {
+  .email-div input{
+    width: 50%;
+  }
+}
 @media only screen and (max-width: 992px) {
   .nav-rightdiv {
     display: flex !important;
@@ -502,6 +517,11 @@ background-color: #343434 !important;
     gap: 40px;
     
   }
+
+
+
+
+  
 }
 video{
   width: 100%;
@@ -518,16 +538,17 @@ video{
 }
 .more-button{
   border: none;
-  background-color: #f6d3ce ;
+  background-color: #000000;
   padding: 10px;
-
-  color: #343434;
+  color: white;
   font-size: 15px;
   font-weight: 100;
   padding-right: 40px;
   padding-left: 40px;
   margin-bottom: 5%;
-
+  font-weight: 600;
+  margin-top: 15%;
+cursor: pointer;
 }
 .first-div{
   display: flex;
@@ -541,28 +562,29 @@ video{
 }
 .more-button:hover{
   transition: 0.5s ease-in-out;
-  background-color: #eba08e  !important;
-  color: white !important;
+  background-color: white  !important;
+  color: #343232 !important;
+  border: 1px solid #343232;
 }
 .Submit-btn{
   border: none;
-  background-color:#e4bfb6 ;
-  padding: 5px;
+  background-color:#343232 ;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif  ;
+  color: white;
+  font-size: 16px;
 
-  color: #343434;
-  font-size: 15px;
-  font-weight: 100;
   padding-right: 30px;
   padding-left: 30px;
   margin-top: 10%;
   margin-bottom: 5%;
-  font-weight: 500;
+  font-weight: 600;
 
 }
 .Submit-btn:hover{
   transition: 0.5s ease-in-out;
-  background-color: #eba08e  !important;
-  color: white !important;
+  background-color: white  !important;
+  color: #343232 !important;
 }
 .thank-you-message{
   text-align: center;
@@ -714,7 +736,7 @@ color: black;
   color: white;
 }
 .options-div div:hover{
-  background-color: #eba08e;
+  background-color: black;
   color: white;
   transition: 0.5s ease-in-out;
 } 
@@ -856,4 +878,8 @@ margin-top: 10%;
     height: 250px;
   }
   
+  }
+  .qr-img{
+    margin-top: 10%;
+    margin-bottom: 10% ;
   }

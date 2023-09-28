@@ -22,6 +22,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 function Quiz() {
+ 
   const [isRecaptchaChecked, setIsRecaptchaChecked] = useState(false);
 
 
@@ -114,7 +115,10 @@ function Quiz() {
       setSelectedOption(userResponses[currentQuestionIndex - 1]);
     }
   };
+  const reload = () => {
 
+   window.location.reload()
+  };
   const handleOptionClick = (option) => {
     setSelectedOption(option);
   };
@@ -177,7 +181,7 @@ else{
               
               {currentQuestionIndex > 0 && (
                 <button
-                  className='back-button'
+                  className='more-button'
                   onClick={() => {
                     handleBack();
                   }}
@@ -186,7 +190,7 @@ else{
                 </button>
               )}
               <button
-                className='next-button'
+                className='more-button'
                 onClick={() => {
                   handleNext();
                 }}
@@ -200,7 +204,9 @@ else{
           <div className='thank-you-message'>
             <div><img src={url} alt="" width={"150px"} /></div>
             <p>Thank you for your submission!</p>
+            <button onClick={reload} className='more-button' >Play Again</button>
           </div>
+         
         ) : (
           <div className='email-div row'>
             <div data-aos="fade-right" data-aos-duration="2000"  className='col-md-6 col-sm-6'>
@@ -229,7 +235,7 @@ else{
        </form>
    
            </div>
-              <button onClick={HandleSubmit}  disabled={!isRecaptchaChecked} className='Submit-btn'>Submit</button>
+              <button onClick={HandleSubmit}  disabled={!isRecaptchaChecked} className=' more-button'>Submit</button>
             </div>
           </div>
         )}

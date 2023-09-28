@@ -136,7 +136,7 @@ function Header() {
       <div className='nav-center'>
       <ul className='children-div'>
         <li>Home</li>
-        <li>Blog</li>
+        <li>About</li>
         <li>Portfolio</li>
       </ul>
            <p id='logo-text'>Joli Tour</p>
