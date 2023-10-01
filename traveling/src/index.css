@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Dancing+Script:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Cormorant Garamond', serif;
+font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -137,7 +138,8 @@ margin-top: 10%;
 }
 #logo-text{
   font-size: 32px;
-  font-family: 'Sansita Swashed', cursive;
+  /* font-family: 'Sansita Swashed', cursive; */
+  font-family: 'Dancing Script', cursive;
 }
 /* Countdown container */
 .countdown {
@@ -170,7 +172,7 @@ color: white;
 
 
 font-size: 40px;
-font-family: Cormorant Garamond !important;
+font-family: 'Cormorant Garamond', serif;
 
 
 }
@@ -346,15 +348,13 @@ cursor: pointer;
   
   background: rgba(228, 191, 182, 0.1);
   
-  font-family: 'Poppins', sans-serif  ;
   margin-bottom: 20%;
   margin-top: 20%;
 }
 .quiz-section h4{
   text-align: center;
-  font-family: Cormorant Garamond;
+  font-family: 'Cormorant Garamond', serif;
   text-align: center;
-  font-family: poppins;
   font-size: 30px;
   width: 80%;
   padding-top: 50px;
@@ -369,14 +369,13 @@ cursor: pointer;
 
 .video-section h4{
   text-align: center;
-
+  font-family: 'Cormorant Garamond', serif;
   font-size: 35px;
 
   padding-top: 50px;
 
 }
 .video-section p{
-  font-family: 'Poppins', sans-serif  ;
   font-size: 20px;
   color: #343434;
   text-align: center;
@@ -417,7 +416,6 @@ cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: 'Poppins', sans-serif  ;
   font-weight: 600;
   margin-top: 5%;
 }
@@ -507,14 +505,14 @@ video{
   width: 100%;
 }
 .down-heading{
-  font-family: Cormorant Garamond !important;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
   font-size: 2.6665em;
 
 }
 .down-text{
   font-weight: 400 !important;
-  font-family: "Montserrat",sans-serif !important; 
+  font-family: 'Montserrat', sans-serif; 
 }
 .more-button{
   border: none;
@@ -696,7 +694,7 @@ font-size: 25px;
 color: black;
 }
 .Companyname{
-  font-family: 'Poppins', sans-serif  ;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 15px;
   font-weight: bold;
   margin-top: 2%;
@@ -708,12 +706,10 @@ color: black;
   margin-top: 1%;
 }
 .pages-footer-links div{
-  font-family: 'Poppins', sans-serif  ;
   font-size: 13px;
   color: white;
 }
 .copyright-text{
-  font-family: 'Poppins', sans-serif  ;
   font-size: 12px;
   margin-top: 1%;
   color: white;
@@ -844,7 +840,6 @@ margin-top: 10%;
 }
 .error-msg{
   font-size: 12px;
-  font-family: 'Poppins', sans-serif  ;
   margin-top: 5%;
   color: red;
 }
