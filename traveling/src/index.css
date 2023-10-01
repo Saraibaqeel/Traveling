@@ -373,7 +373,6 @@ cursor: pointer;
   font-size: 35px;
 
   padding-top: 50px;
-  font-family: Cormorant Garamond !important;
 
 }
 .video-section p{
@@ -421,13 +420,6 @@ cursor: pointer;
   font-family: 'Poppins', sans-serif  ;
   font-weight: 600;
   margin-top: 5%;
-}
-.Questions-div p{
-
-  font-family: 'Poppins', sans-serif  ;
-  font-weight: 500;
-  margin-top: 5%;
-  font-size: 20px;
 }
 .next-button{
 
@@ -483,9 +475,8 @@ background-color: #343434 !important;
 
 }
 .options-div .selected-option{
-  background-color: black
+  background-color: #eba08e
   ;
-  color: white;
 }
 .email-input{
   border: none;
@@ -503,12 +494,6 @@ background-color: #343434 !important;
   border: none !important;
 }
 
-
-@media only screen and (min-width: 992px) {
-  .email-div input{
-    width: 50%;
-  }
-}
 @media only screen and (max-width: 992px) {
   .nav-rightdiv {
     display: flex !important;
@@ -517,11 +502,6 @@ background-color: #343434 !important;
     gap: 40px;
     
   }
-
-
-
-
-  
 }
 video{
   width: 100%;
@@ -538,17 +518,16 @@ video{
 }
 .more-button{
   border: none;
-  background-color: #000000;
+  background-color: #f6d3ce ;
   padding: 10px;
-  color: white;
+
+  color: #343434;
   font-size: 15px;
   font-weight: 100;
   padding-right: 40px;
   padding-left: 40px;
   margin-bottom: 5%;
-  font-weight: 600;
-  margin-top: 15%;
-cursor: pointer;
+
 }
 .first-div{
   display: flex;
@@ -562,29 +541,28 @@ cursor: pointer;
 }
 .more-button:hover{
   transition: 0.5s ease-in-out;
-  background-color: white  !important;
-  color: #343232 !important;
-  border: 1px solid #343232;
+  background-color: #eba08e  !important;
+  color: white !important;
 }
 .Submit-btn{
   border: none;
-  background-color:#343232 ;
-  padding: 10px;
-  font-family: 'Poppins', sans-serif  ;
-  color: white;
-  font-size: 16px;
+  background-color:#e4bfb6 ;
+  padding: 5px;
 
+  color: #343434;
+  font-size: 15px;
+  font-weight: 100;
   padding-right: 30px;
   padding-left: 30px;
   margin-top: 10%;
   margin-bottom: 5%;
-  font-weight: 600;
+  font-weight: 500;
 
 }
 .Submit-btn:hover{
   transition: 0.5s ease-in-out;
-  background-color: white  !important;
-  color: #343232 !important;
+  background-color: #eba08e  !important;
+  color: white !important;
 }
 .thank-you-message{
   text-align: center;
@@ -633,6 +611,9 @@ padding: 10px !important;
   .icon-box{
     display: none;
   }
+  #logo-text{
+    font-size: 35px !important;
+  }
   
 
 }
@@ -642,11 +623,12 @@ padding: 10px !important;
     width: 100%;
   }
   #logo-text{
-    font-size: 20px;
+    font-size: 32px !important;
   }
-  .nav-right{
-    margin-top: 2%;
+  .customnav1{
+    height: 60px !important;
   }
+  
 .footer-icons-sec{
   display: flex;
   flex-wrap: wrap !important;
@@ -736,7 +718,7 @@ color: black;
   color: white;
 }
 .options-div div:hover{
-  background-color: black;
+  background-color: #eba08e;
   color: white;
   transition: 0.5s ease-in-out;
 } 
@@ -800,14 +782,23 @@ margin: 15px;
 .mobile-nav{
   display: none;
 }
+
 }
 
 @media only screen and (max-width: 800px) {
   .desktop-nav {
     display: none;
   }
+  .customnav1{
+    height: 70px;
+  }
+  #logo-text{
+    font-size: 40px;
+    margin-left: 20px;
+  }
   .nav-right{
     width: 50%;
+    margin-top: 0%;
   }
   .nav-left{
     display: flex;
@@ -874,12 +865,8 @@ margin-top: 10%;
   .options-image{
     transform: rotate(0deg) !important;
     border: 8px solid white;
-    width: 300px;
+  
     height: 250px;
   }
   
-  }
-  .qr-img{
-    margin-top: 10%;
-    margin-bottom: 10% ;
   }
