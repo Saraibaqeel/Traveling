@@ -448,7 +448,8 @@ cursor: pointer;
 .options-div{
   display: flex;
   flex-direction: column;
-  width: 100%;
+  align-self: center;
+  width: 81%;
 }
 .next-btn-div{
   display:flex;
@@ -464,7 +465,7 @@ cursor: pointer;
   padding: 20px;
   background-color: white;
   margin-top: 5%;
-  width: 90%;
+  width: 70%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .selected-label {
@@ -499,6 +500,9 @@ background-color: #343434 !important;
     align-items: flex-start !important;
     gap: 40px;
     
+  }
+  .options-div div{
+    width: 91% !important;
   }
 }
 video{
@@ -537,6 +541,7 @@ margin-top: 5%;
 .video-div{
   display: flex;
   justify-content: center;
+  margin-top: 15%;
 }
 .more-button:hover{
   transition: 0.5s ease-in-out;
@@ -636,7 +641,7 @@ padding: 10px !important;
     width: 120px;
   }
   .options-div div{
-    width: 100%;
+    width: 91%;
   }
 }
 .Footer-section{
@@ -848,21 +853,47 @@ margin-top: 10%;
   width: 100%;
 }
 .options-image{
-  transform: rotate(-15deg) !important;
-  border: 8px solid white;
+
+
   width: 100%;
   height: 250px;
+
+  
 }
 @media only screen and (max-width: 770px) {
   .question-main-div{
     display: flex;
     flex-direction: column-reverse;
+  
+  }
+  .main-question{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-question p{
+    width: 100%;
+    text-align: left;
+  }
+  .options-div div{
+    width: 91% !important;
   }
   .options-image{
     transform: rotate(0deg) !important;
-    border: 8px solid white;
   
+  width: 91% !important;
     height: 250px;
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .option-img{
+    width: 80% !important;
   }
   
+  }
+  .options-image{
+    width: 350px;
+    display: flex;
+    justify-content: center;
   }

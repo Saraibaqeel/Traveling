@@ -147,8 +147,10 @@ else{
       <div>
         {currentQuestionIndex < questions.length && showInput ? (
           <div id="quiz"  className='Questions-div'>
+          <div className='main-question'>
             <p>{currentQuestionIndex + 1}/5</p>
             <p>{questions[currentQuestionIndex].question}</p>
+            </div>
             <div className='question-main-div'>
            
             <div className='options-div'>
@@ -175,7 +177,7 @@ else{
               ))}
             </div>
             <div  className='options-image'  data-aos={"fade-right"} 
-                data-aos-duration="5000"><img src={questions[currentQuestionIndex].src} alt="" width={"100%" } height={"100%"}  /></div>
+                data-aos-duration="5000"><img className='option-img' src={questions[currentQuestionIndex].src} alt="" width={"350px" } height={"100%"}  /></div>
             </div>
             <div className='next-btn-div'>
               
@@ -209,12 +211,12 @@ else{
          
         ) : (
           <div className='email-div row'>
-            <div data-aos="fade-right" data-aos-duration="2000"  className='col-md-6 col-sm-6'>
+            <div data-aos="fade-top" data-aos-duration="2000"  className='col-md-6 col-sm-6'>
            
     <div className="label-div"> <label htmlFor="">Your Email</label></div>
               <input ref={email1} className='email-input' type='email' placeholder='Enter Your Email'></input>
             </div>
-            <div data-aos="fade-left" data-aos-duration="2000"  className='col-md-6 col-sm-6'>
+            <div data-aos="fade-top" data-aos-duration="2000"  className='col-md-6 col-sm-6'>
              
             <div className="label-div"> <label htmlFor="">Your Loved One's Email</label></div>
 

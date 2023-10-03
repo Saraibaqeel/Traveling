@@ -22,7 +22,7 @@ function VideoSection(){
   <button className='more-button'>MORE ABOUT US</button>
   </div>
   <div data-aos="fade-down" data-aos-duration="1500" className='col-md-12 col-lg-6 col-sm-12 video-div' >
- <img src={url} alt="" width={"98%"} height={"98%"} />
+ <img src={url} alt="" width={"350px"} height={"300px"} />
   </div>
 
 
